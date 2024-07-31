@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech.Care Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.querySelector("nav ul.menu");
+    
+        menuToggle.addEventListener("click", function() {
+            menu.classList.toggle("active");
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><img src="TestLogo.svg" alt="Tech.Care Logo" class="logo-img"></div>
+            <nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    <img src="menu-unfold-line.svg" alt="Menu">
+                </div>
+                <ul class="menu">
+                    <li><a href="#"><img src="home.svg" alt="Overview">Overview</a></li>
+                    <li><a href="#"><img src="group.svg" alt="Patients">Patients</a></li>
+                    <li><a href="#"><img src="calendar.svg" alt="Schedule">Schedule</a></li>
+                    <li><a href="#"><img src="chat.svg" alt="Message">Message</a></li>
+                    <li><a href="#"><img src="card.svg" alt="Transactions">Transactions</a></li>
+                </ul>
+            </nav>
+            <div class="profile">
+                <img src="senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png" alt="Doctor Profile" class="profile-img">
+                <div class="doctor-section">
+                    <p class="doctor-name">Dr. Jose Simmons</p>
+                    <p class="specialization">General Practitioner</p>
+                </div>
+                <div class="profile-actions">
+                    <div class="vertical-line"></div>
+                    <img src="settings.svg" alt="Settings" class="action-icon">
+                    <img src="triple.svg" alt="Triple" class="action-icon">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="patients">
+                <h2>Patients <img src="search.svg" alt="Search" class="search-icon"></h2> 
+                <div class="scrollable-container">
+                    <ul class="scrollable-list">
+                        <li>
+                            <img src="Layer-8.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Emily Williams <br> <span>Female, 18</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-1@2x.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ryan Johnson <br> <span>Male, 45</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-3.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Brandon Mitchell<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-2.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Jessica Taylor<br> <span>Female, 28</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-6.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Samantha Johnson <br> <span>Female, 56</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-12.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ashley Martinez <br> <span>Female, 54</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-10.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Olivia Brown<br> <span>Female, 32</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-9.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Tyler Davis<br> <span>Male, 19</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-4.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Kevin Anderson<br> <span>Male, 30</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-5.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Dylan Thompson<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-7.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Nathan Evans<br> <span>Male, 58</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="pexels-photo-1222271.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Mike Nolan<br> <span>Male, 31</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-8.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Emily Williams <br> <span>Female, 18</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-1@2x.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ryan Johnson <br> <span>Male, 45</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-3.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Brandon Mitchell<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-2.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Jessica Taylor<br> <span>Female, 28</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-6.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Samantha Johnson <br> <span>Female, 56</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-12.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ashley Martinez <br> <span>Female, 54</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-10.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Olivia Brown<br> <span>Female, 32</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-9.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Tyler Davis<br> <span>Male, 19</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-4.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Kevin Anderson<br> <span>Male, 30</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-5.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Dylan Thompson<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-7.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Nathan Evans<br> <span>Male, 58</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="pexels-photo-1222271.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Mike Nolan<br> <span>Male, 31</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-8.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Emily Williams <br> <span>Female, 18</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-1@2x.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ryan Johnson <br> <span>Male, 45</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-3.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Brandon Mitchell<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-2.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Jessica Taylor<br> <span>Female, 28</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-6.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Samantha Johnson <br> <span>Female, 56</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-12.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ashley Martinez <br> <span>Female, 54</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-10.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Olivia Brown<br> <span>Female, 32</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-9.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Tyler Davis<br> <span>Male, 19</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-4.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Kevin Anderson<br> <span>Male, 30</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-5.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Dylan Thompson<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-7.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Nathan Evans<br> <span>Male, 58</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="pexels-photo-1222271.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Mike Nolan<br> <span>Male, 31</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-8.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Emily Williams <br> <span>Female, 18</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-1@2x.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ryan Johnson <br> <span>Male, 45</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-3.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Brandon Mitchell<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-2.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Jessica Taylor<br> <span>Female, 28</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-6.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Samantha Johnson <br> <span>Female, 56</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-12.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ashley Martinez <br> <span>Female, 54</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-10.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Olivia Brown<br> <span>Female, 32</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-9.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Tyler Davis<br> <span>Male, 19</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-4.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Kevin Anderson<br> <span>Male, 30</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-5.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Dylan Thompson<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-7.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Nathan Evans<br> <span>Male, 58</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="pexels-photo-1222271.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Mike Nolan<br> <span>Male, 31</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-8.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Emily Williams <br> <span>Female, 18</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-1@2x.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ryan Johnson <br> <span>Male, 45</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-3.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Brandon Mitchell<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-2.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Jessica Taylor<br> <span>Female, 28</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-6.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Samantha Johnson <br> <span>Female, 56</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-12.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ashley Martinez <br> <span>Female, 54</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-10.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Olivia Brown<br> <span>Female, 32</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-9.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Tyler Davis<br> <span>Male, 19</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-4.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Kevin Anderson<br> <span>Male, 30</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-5.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Dylan Thompson<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-7.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Nathan Evans<br> <span>Male, 58</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="pexels-photo-1222271.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Mike Nolan<br> <span>Male, 31</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-8.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Emily Williams <br> <span>Female, 18</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-1@2x.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ryan Johnson <br> <span>Male, 45</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-3.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Brandon Mitchell<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-2.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Jessica Taylor<br> <span>Female, 28</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-6.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Samantha Johnson <br> <span>Female, 56</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-12.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Ashley Martinez <br> <span>Female, 54</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-10.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Olivia Brown<br> <span>Female, 32</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-9.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Tyler Davis<br> <span>Male, 19</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-4.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Kevin Anderson<br> <span>Male, 30</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-5.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Dylan Thompson<br> <span>Male, 36</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="Layer-7.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Nathan Evans<br> <span>Male, 58</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        <li>
+                            <img src="pexels-photo-1222271.png" alt="Profile Image" class="profile-img"> 
+                            <div class="text-content">Mike Nolan<br> <span>Male, 31</span></div>
+                            <img src="3dots.svg" alt="Options" class="options-icon">
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <section class="diagnosis-history">
+                <h2>Diagnosis History</h2>
+                <div class="chart">
+                    <div class="chart-header">
+                        <h3>Blood Pressure</h3>
+                        <select>
+                            <option>Last 6 months</option>
+                            <option>Last 12 months</option>
+                            <option>Last 24 months</option>
+                        </select>
+                    </div>
+
+                    <div class="chart-content">
+                        <canvas id="bloodPressureChart" height="300px"></canvas>
+                    </div>
+                    <div class="chart-info">
+                        <div class="systolic">
+                            <span class="dot systolic-dot"></span>
+                            
+                        </div>
+                        <div class="diastolic" >
+                            <span class="dot diastolic-dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <img src="respiratory-rate.png" alt="Respiratory Icon" class="stat-icon">
+                        <p>Respiratory Rate</p>
+                        <p class="stat-value">20 bpm</p>
+                        <p>Normal</p>
+                    </div>
+                    <div class="stat">
+                        <img src="temperature.png" alt="Thermometer Icon" class="stat-icon">
+                        <p>Temperature</p>
+                        <p class="stat-value">98.6°F</p>
+                        <p>Normal</p>
+                    </div>
+                    <div class="stat">
+                        <img src="HeartBPM.png" alt="Heart Icon" class="stat-icon">
+                        <p>Heart Rate</p>
+                        <p class="stat-value">78 bpm</p>
+                        <p class="stat-text">
+                            <img src="down.svg" alt="Down Icon" class="lower-icon">
+                            Lower than Average
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="patient-info">
+                <img src="Layer-2@2x.png" alt="Jessica Taylor" class="profile-img">
+                <h2>Jessica Taylor</h2>
+                <ul>
+                    <li><img src="BirthIcon.png" alt="Calendar Icon"> Date of Birth <br> August 23, 1996</li>
+                    <li><img src="FemaleIcon.png" alt="Gender Icon"> Gender <br> Female</li>
+                    <li><img src="PhoneIcon.png" alt="Phone Icon"> Contact Information <br> (415) 555-1234</li>
+                    <li><img src="PhoneIcon.png" alt="Emergency Icon"> Emergency Contacts <br> (415) 555-5678</li>
+                    <li><img src="InsuranceIcon.png" alt="Insurance Icon"> Insurance Provider <br> Sunrise Health Assurance</li>
+                </ul>
+                <button  id="show-info-button">Show All Information</button>
+            </section>
+
+            <section class="diagnostic-list">
+                <h2>Diagnostic List</h2>
+                <table>
+                    <tr style="background-color: #f0f0f0;" >
+                        <th>Problem/Diagnosis</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Hypertension</td>
+                        <td>Chronic high blood pressure</td>
+                        <td>Under Observation</td>
+                    </tr>
+                    <tr>
+                        <td>Type 2 Diabetes</td>
+                        <td>Insulin resistance and elevated blood sugar</td>
+                        <td>Cured</td>
+                    </tr>
+                    <tr>
+                        <td>Asthma</td>
+                        <td>Recurrent episodes of bronchial constriction</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Diabetes</td>
+                        <td>Chronic condition that affects the way the body processes blood sugar</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Hypertension</td>
+                        <td>High blood pressure</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Hyperthyroidism</td>
+                        <td>Overactive thyroid gland</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Chronic Bronchitis</td>
+                        <td>Long-term inflammation of the bronchial tubes</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Osteoarthritis</td>
+                        <td>Degenerative joint disease</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Rheumatoid Arthritis</td>
+                        <td>Autoimmune disorder affecting joints</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Allergic Rhinitis</td>
+                        <td>Allergy causing nasal inflammation</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Chronic Fatigue Syndrome</td>
+                        <td>Persistent fatigue not improved by rest</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Epilepsy</td>
+                        <td>Neurological disorder characterized by seizures</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Gastroesophageal Reflux Disease (GERD)</td>
+                        <td>Chronic acid reflux causing heartburn</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Glaucoma</td>
+                        <td>Condition causing increased pressure within the eye</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Hepatitis B</td>
+                        <td>Viral infection causing liver inflammation</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Insomnia</td>
+                        <td>Difficulty falling or staying asleep</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Kidney Stones</td>
+                        <td>Hard deposits forming in the kidneys</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Multiple Sclerosis</td>
+                        <td>Autoimmune disease affecting the central nervous system</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Parkinson's Disease</td>
+                        <td>Neurological disorder causing tremors and stiffness</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Peptic Ulcer</td>
+                        <td>Sore in the lining of the stomach or duodenum</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Psoriasis</td>
+                        <td>Skin condition causing red, scaly patches</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Raynaud's Disease</td>
+                        <td>Condition causing reduced blood flow to extremities</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Schizophrenia</td>
+                        <td>Severe mental disorder characterized by distorted thinking</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Sinusitis</td>
+                        <td>Inflammation of the sinuses</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Sjögren's Syndrome</td>
+                        <td>Autoimmune disorder affecting moisture-producing glands</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Stroke</td>
+                        <td>Disruption of blood supply to the brain</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Tuberculosis</td>
+                        <td>Infectious disease affecting the lungs</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Ulcerative Colitis</td>
+                        <td>Chronic inflammation of the colon and rectum</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Vertigo</td>
+                        <td>Sensation of spinning or dizziness</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>Vitamin D Deficiency</td>
+                        <td>Lack of vitamin D leading to bone issues</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Wheat Allergy</td>
+                        <td>Allergic reaction to proteins found in wheat</td>
+                        <td>Inactive</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="lab-results">
+                <h2>Lab Results</h2>
+                <ul>
+                    <li>Endoscopy Reports <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Pregnancy Tests <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Allergy Tests <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Genetic Testing Results <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Pulmonary Function Tests <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Hematology Reports <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>CT Angiograms <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Vaccination Records <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Sleep Study Reports <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Prostate-Specific Antigen (PSA) Tests <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Cholesterol Tests <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Kidney Function Tests <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Thyroid Function Tests <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Stool Tests <img src="download.svg" alt="Download" class="icon"></li>
+                    <li>Electroencephalograms (EEGs) <img src="download.svg" alt="Download" class="icon"></li>
+                  </ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
